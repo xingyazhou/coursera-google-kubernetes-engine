@@ -42,9 +42,28 @@ Metrics-server is running at https://35.192.176.131/api/v1/namespaces/kube-syste
 
 ## Run and Deploy a Container
 
-kubectl create deployment nginx --image=nginx:1.10.0
-kubectl get pods
+kubectl create deployment nginx --image=nginx:1.10.0<br>
+
+kubectl get pods <br>
+NAME                     READY   STATUS    RESTARTS   AGE
+nginx                    1/1     Running   0          56m
+nginx-574c99d7c8-sk52m   1/1     Running   0          5s <br>
+
 ### Use the kubectl expose command to expose the nginx container outside Kubernetes.
-kubectl expose deployment nginx --port 80 --type LoadBalancer
-kubectl get services
-kubectl scale deployment nginx --replicas 3
+kubectl expose deployment nginx --port 80 --type LoadBalancer <br>
+service/nginx exposed <br>
+
+kubectl get services <br>
+NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+kubernetes   ClusterIP      10.51.240.1     <none>        443/TCP        68m
+nginx        LoadBalancer   10.51.253.193   <pending>     80:30476/TCP   41s <br>
+
+kubectl scale deployment nginx --replicas 3 <br>
+deployment.extensions/nginx scaled <br>
+
+kubectl get pods <br>
+NAME                     READY   STATUS    RESTARTS   AGE
+nginx                    1/1     Running   0          58m
+nginx-574c99d7c8-h2rxf   1/1     Running   0          24s
+nginx-574c99d7c8-sk52m   1/1     Running   0          2m30s
+nginx-574c99d7c8-w5q6d   1/1     Running   0          24s
