@@ -39,11 +39,11 @@ o1.12.12b4", Compiler:"gc", Platform:"linux/amd64"}
 ```
 kubectl cluster-info
 ```
-Kubernetes master is running at https://35.192.176.131
-GLBCDefaultBackend is running at https://35.192.176.131/api/v1/namespaces/kube-system/services/default-http-backend:http/proxy
-Heapster is running at https://35.192.176.131/api/v1/namespaces/kube-system/services/heapster/proxy
-KubeDNS is running at https://35.192.176.131/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-Metrics-server is running at https://35.192.176.131/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy
+Kubernetes master is running at https://35.192.176.131 <br>
+GLBCDefaultBackend is running at https://35.192.176.131/api/v1/namespaces/kube-system/services/default-http-backend:http/proxy<br>
+Heapster is running at https://35.192.176.131/api/v1/namespaces/kube-system/services/heapster/proxy<br>
+KubeDNS is running at https://35.192.176.131/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy<br>
+Metrics-server is running at https://35.192.176.131/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy<br>
 
 ## Run and Deploy a Container
 ```
@@ -58,18 +58,26 @@ nginx                    1/1     Running   0          56m
 nginx-574c99d7c8-sk52m   1/1     Running   0          5s <br>
 
 ### Use the kubectl expose command to expose the nginx container outside Kubernetes.
-kubectl expose deployment nginx --port 80 --type LoadBalancer <br>
+```
+kubectl expose deployment nginx --port 80 --type LoadBalancer
+```
 service/nginx exposed <br>
 
-kubectl get services <br>
+```
+kubectl get services 
+```
 NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
 kubernetes   ClusterIP      10.51.240.1     <none>        443/TCP        68m
 nginx        LoadBalancer   10.51.253.193   <pending>     80:30476/TCP   41s <br>
 
-kubectl scale deployment nginx --replicas 3 <br>
+```
+kubectl scale deployment nginx --replicas 3 
+```
 deployment.extensions/nginx scaled <br>
 
-kubectl get pods <br>
+```
+kubectl get pods
+```
 NAME                     READY   STATUS    RESTARTS   AGE
 nginx                    1/1     Running   0          58m
 nginx-574c99d7c8-h2rxf   1/1     Running   0          24s
