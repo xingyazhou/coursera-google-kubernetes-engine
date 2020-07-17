@@ -7,20 +7,15 @@ git clone https://github.com/googlecodelabs/orchestrate-with-kubernetes.git
 cd orchestrate-with-kubernetes/kubernetes
 
 ls
+| Folder |Description |
+| --- | ----------- |
+| deployments/   |Deployment manifests       |
+| nginx/   | nginx config files       |
+| pods/  | pod manifests       |
+| tls/   | TLS certificates      |
+| cleanup.sh   | Cleanup script       |
 
-You'll see the following structure.
 
->deployments/	Deployment manifests
-
->nginx/	nginx config files
-
->pods/	pod manifests
-
->services/	Services manifests
-
->tls/	TLS certificates
-
->cleanup.sh	Cleanup script
 
 ## Starts a Kubernetes Cluster
 
