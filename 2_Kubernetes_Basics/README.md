@@ -23,11 +23,7 @@ $ls
 ## Starts a Kubernetes Cluster
 ```
 $gcloud config set compute/zone us-central1-a
-```
-```
 $gcloud container clusters create bootcamp --num-nodes 5 --scopes "https://www.googleapis.com/auth/projecthosting,storage-rw"
-```
-```
 $kubectl version
 ```
 Client Version: version.Info{Major:"1", Minor:"18", GitVersion:"v1.18.5", GitCommit:"e6503f8d8f769ace2f338794c914a96fc335df0f", GitTreeState:"clean", BuildDate:"2020-06-26T03:47:41Z", GoVersion:"go1.13.9",
