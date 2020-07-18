@@ -24,11 +24,9 @@ $ls
 ```
 $gcloud config set compute/zone us-central1-a
 ```
-
 ```
 $gcloud container clusters create bootcamp --num-nodes 5 --scopes "https://www.googleapis.com/auth/projecthosting,storage-rw"
 ```
-
 ```
 $kubectl version
 ```
