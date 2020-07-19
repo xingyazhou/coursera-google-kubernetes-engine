@@ -22,19 +22,19 @@ Docker provides a simple means to package applications as containers with a repe
 
 ### Preparation
 
-***Pull a prebuilt SDK container image***
+**Pull a prebuilt SDK container image**
 ```
 docker pull apache/beam_python3.7_sdk
 ```
 For more info, please check [**Beam SDK container images**](https://beam.apache.org/documentation/runtime/environments/)
 
-***Look at the wordcount/Dockerfile.***<br>
+**Look at the wordcount/Dockerfile.**<br>
 ```
 FROM apache/beam_python3.7_sdk:latest
 COPY wordcount.py /
 ENTRYPOINT python /wordcount.py
 ```
-***Look at the wordcount/wordcount.py.***<br>
+**Look at the wordcount/wordcount.py.**<br>
 ```
 from __future__ import print_function
 import apache_beam as beam
