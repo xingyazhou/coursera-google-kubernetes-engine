@@ -6,7 +6,7 @@ This lab is simply modified to use a simple beam_python wordcount.py as sample c
 
 Containers are a way of isolating programs or processes from each other. The primary aim of containers is to make programs easy to deploy in a way that doesn't cause them to break.
 
-In this lab, create and run a simple Docker container image that includes a simple wordcount written in Python, upload it to a Google Container Registry, and share it with everyone so it can be run anywhere that supports Docker.
+In this lab, create and run a simple Docker container image that includes a simple wordcount written in Python, upload it to a Google Container Registry, so it can be run anywhere that supports Docker.
 
 
 ## Project Files
@@ -24,7 +24,7 @@ Docker provides a simple means to package applications as containers with a repe
 ```
 docker pull apache/beam_python3.7_sdk
 ```
-For more info, please check [Beam SDK container images](https://beam.apache.org/documentation/runtime/environments/)
+For more info, please check [**Beam SDK container images**](https://beam.apache.org/documentation/runtime/environments/)
 
 ***Look at the wordcount/Dockerfile.***<br>
 ```
