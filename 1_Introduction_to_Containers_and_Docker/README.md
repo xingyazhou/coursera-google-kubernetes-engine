@@ -26,7 +26,7 @@ docker pull apache/beam_python3.7_sdk
 ```
 For more info, please check [Beam SDK container images](https://beam.apache.org/documentation/runtime/environments/)
 
-***Look at the Dockerfile.***<br>
+***Look at the wordcount/Dockerfile.***<br>
 ```
 FROM apache/beam_python3.7_sdk:latest
 COPY wordcount.py /
@@ -89,7 +89,7 @@ $ docker push gcr.io/${GCP_PROJECT}/wordcount:v1
 
 ### 3. Run the Wordcount Container From Any Machine
 ```
-$ docker run gcr.io/${GCP_PROJECT}/wordcount:v2
+$ docker run gcr.io/${GCP_PROJECT}/wordcount:v1
 
 ('cat', 2)
 ('dog', 2)
