@@ -89,7 +89,7 @@ Push the image to gcr.io.
 $ docker push gcr.io/${GCP_PROJECT}/wordcount:v1
 ```
 
-### 3. Run the Wordcount Container From Any Machine
+### 3. Run the Wordcount Image From Any Machine
 ```
 $ docker run gcr.io/${GCP_PROJECT}/wordcount:v1
 
