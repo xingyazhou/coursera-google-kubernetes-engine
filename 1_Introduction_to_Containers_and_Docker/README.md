@@ -20,7 +20,7 @@ In addition to the data files, the project workspace includes 3 files:
 
 Docker provides a simple means to package applications as containers with a repeatable execution environment.
 
-###0. Preparation
+### 0. Preparation
 
 ***Pull a prebuilt SDK container image***
 ```
