@@ -25,32 +25,14 @@ $ls
 $gcloud config set compute/zone us-central1-a
 $gcloud container clusters create bootcamp --num-nodes 5 --scopes "https://www.googleapis.com/auth/projecthosting,storage-rw"
 $kubectl version
-```
-Client Version: version.Info{Major:"1", Minor:"18", GitVersion:"v1.18.5", GitCommit:"e6503f8d8f769ace2f338794c914a96fc335df0f", GitTreeState:"clean", BuildDate:"2020-06-26T03:47:41Z", GoVersion:"go1.13.9",
- Compiler:"gc", Platform:"linux/amd64"}
-Server Version: version.Info{Major:"1", Minor:"14+", GitVersion:"v1.14.10-gke.36", GitCommit:"34a615f32e9a0c9e97cdb9f749adb392758349a6", GitTreeState:"clean", BuildDate:"2020-04-06T16:33:17Z", GoVersion:"g
-o1.12.12b4", Compiler:"gc", Platform:"linux/amd64"}
-
-```
 $kubectl cluster-info
 ```
-Kubernetes master is running at https://35.192.176.131 <br>
-GLBCDefaultBackend is running at https://35.192.176.131/api/v1/namespaces/kube-system/services/default-http-backend:http/proxy<br>
-Heapster is running at https://35.192.176.131/api/v1/namespaces/kube-system/services/heapster/proxy<br>
-KubeDNS is running at https://35.192.176.131/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy<br>
-Metrics-server is running at https://35.192.176.131/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy<br>
 
 ## Run and Deploy a Container
 ```
 $kubectl create deployment nginx --image=nginx:1.10.0
-```
-
-```
 $kubectl get pods
 ```
-NAME                     READY   STATUS    RESTARTS   AGE
-nginx                    1/1     Running   0          56m
-nginx-574c99d7c8-sk52m   1/1     Running   0          5s <br>
 
 ### Use the kubectl expose command to expose the nginx container outside Kubernetes.
 ```
