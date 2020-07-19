@@ -2,7 +2,7 @@
 
 
 ## Introduction
-This lab is simply modified to use a simple beam_pathon wordcount.py as sample code.
+This lab is simply modified to use a simple beam_python wordcount.py as sample code.
 
 Containers are a way of isolating programs or processes from each other. The primary aim of containers is to make programs easy to deploy in a way that doesn't cause them to break.
 
