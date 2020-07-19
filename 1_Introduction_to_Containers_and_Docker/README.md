@@ -101,6 +101,9 @@ $ docker run gcr.io/${GCP_PROJECT}/wordcount:v1
 ('sheep', 1)
 ```
 
+To learn more about Dockerfiles, look at [**this reference.**](https://docs.docker.com/engine/reference/builder/)
+
+To know more about Docker images, look at [**this reference.**](https://docs.docker.com/storage/storagedriver/)
 ## Author
 Xingya Zhou
 
