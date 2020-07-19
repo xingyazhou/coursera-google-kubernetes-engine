@@ -20,7 +20,7 @@ In addition to the data files, the project workspace includes 3 files:
 
 Docker provides a simple means to package applications as containers with a repeatable execution environment.
 
-### 0. Preparation
+### Preparation
 
 ***Pull a prebuilt SDK container image***
 ```
@@ -58,7 +58,7 @@ with beam.Pipeline(options=PipelineOptions()) as p:
     counts | 'Print' >> beam.ParDo(lambda x: print(x))
 ```
 
-### 1. Build a Docker image
+### Build a Docker image
 
 ```
 $ export GCP_PROJECT=`gcloud config list core/project --format='value(core.project)'`
@@ -77,7 +77,7 @@ Successfully built e041e14359ce
 Successfully tagged gcr.io/my-first-gcp-project-271812/wordcount:v1
 ```
 
-### 2. Push a Docker image to GCR
+### Push a Docker image to GCR
 Configure Docker to use gcloud as a Container Registry credential helper (you are only required to do this once).
 ```
 $ PATH=/usr/lib/google-cloud-sdk/bin:$PATH
@@ -89,7 +89,7 @@ Push the image to gcr.io.
 $ docker push gcr.io/${GCP_PROJECT}/wordcount:v1
 ```
 
-### 3. Run the Wordcount Image From Any Machine
+### Run the Wordcount Image From Any Machine
 ```
 $ docker run gcr.io/${GCP_PROJECT}/wordcount:v1
 
