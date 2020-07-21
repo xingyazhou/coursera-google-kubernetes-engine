@@ -6,8 +6,6 @@ git clone https://github.com/googlecodelabs/orchestrate-with-kubernetes.git
 ## Review the app layout.
 ```
 $cd orchestrate-with-kubernetes/kubernetes
-```
-```
 $ls
 ```
 | Folder |Description |
@@ -38,10 +36,11 @@ $ kubectl get pods
 ```
 $ kubectl expose deployment nginx --port 80 --type LoadBalancer
 $ kubectl get services 
-```
+
 NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
 kubernetes   ClusterIP      10.51.240.1     <none>        443/TCP        68m
 nginx        LoadBalancer   10.51.253.193   <pending>     80:30476/TCP   41s <br>
+```
 
 ```
 $ kubectl scale deployment nginx --replicas 3 
