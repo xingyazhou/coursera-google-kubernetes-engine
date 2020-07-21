@@ -37,10 +37,6 @@ $kubectl get pods
 ### Use the kubectl expose command to expose the nginx container outside Kubernetes.
 ```
 $kubectl expose deployment nginx --port 80 --type LoadBalancer
-```
-service/nginx exposed <br>
-
-```
 $kubectl get services 
 ```
 NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
@@ -49,10 +45,6 @@ nginx        LoadBalancer   10.51.253.193   <pending>     80:30476/TCP   41s <br
 
 ```
 $kubectl scale deployment nginx --replicas 3 
-```
-deployment.extensions/nginx scaled <br>
-
-```
 $kubectl get pods
 ```
 NAME                     READY   STATUS    RESTARTS   AGE
