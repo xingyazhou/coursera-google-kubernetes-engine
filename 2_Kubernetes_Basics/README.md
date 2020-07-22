@@ -53,7 +53,7 @@ nginx-574c99d7c8-sk52m   1/1     Running   0          2m30s
 nginx-574c99d7c8-w5q6d   1/1     Running   0          24s
 ```
 
-**Test the application with EXTERNAL-IP adderss abd PORT
+**Test the application with EXTERNAL-IP adderss abd PORT**
 ```
 $ curl http://34.67.173.82:80
 
