@@ -37,9 +37,9 @@ $ kubectl get pods
 $ kubectl expose deployment nginx --port 80 --type LoadBalancer
 $ kubectl get services 
 
-NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
-kubernetes   ClusterIP      10.51.240.1     <none>        443/TCP        68m
-nginx        LoadBalancer   10.51.253.193   <pending>     80:30476/TCP   41s <br>
+NAME         TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)        AGE
+kubernetes   ClusterIP      10.51.240.1     <none>         443/TCP        4d16h
+nginx        LoadBalancer   10.51.240.255   34.67.173.82   80:30148/TCP   53s
 ```
 
 ```
