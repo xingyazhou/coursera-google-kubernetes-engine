@@ -3,8 +3,6 @@
 ## Introduction
 This lab is simply modified to use a wordcount image for deployment. The wordcount image is stored in Google Container Registry.
 
-
-
 ## Start a Kubernetes Cluster
 ```
 $ gcloud config set compute/zone us-central1-a
@@ -50,21 +48,35 @@ kubectl create will create the wordcount deployment with three replicas, using v
 **Create the deployment object using kubectl create.**
 ```
 kubectl create -f deployments/wordcount.yaml
+```
 
+**Get Deployments**
+```
 kubectl get deployments
+
 NAME          READY   UP-TO-DATE   AVAILABLE   AGE
 wordcount     3/3     3            3           6s
+```
 
+**Get Replicasets**
+```
 kubectl get replicasets
+
 NAME                    DESIRED   CURRENT   READY   AGE
 wordcount-57749b848c    3         3         0       82s
+```
 
+**Get Pods**
+```
 kubectl get pods
+
 NAME                          READY   STATUS    RESTARTS   AGE
 wordcount-57749b848c-b8w46    1/1     Running   1          13s
 wordcount-57749b848c-ckthp    1/1     Running   1          13s
 wordcount-57749b848c-z99hc    1/1     Running   1          13s
 ```
+
+**Get Logs**
 ```
 kubectl logs -f --tail 50 wordcount-57749b848c-b8w46 
 
