@@ -5,7 +5,7 @@ This lab is simply modified to use a wordcount image for deployment. The wordcou
 
 
 
-## Starts a Kubernetes Cluster
+## Start a Kubernetes Cluster
 ```
 $ gcloud config set compute/zone us-central1-a
 $ gcloud container clusters create bootcamp --num-nodes 5 --scopes "https://www.googleapis.com/auth/projecthosting,storage-rw"
