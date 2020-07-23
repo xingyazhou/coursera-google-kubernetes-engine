@@ -1,5 +1,10 @@
 # Qwiklab 3: Deploying to Kubernetes
 
+## Introduction
+This lab is simply modified to use a  wordcount image for deployment.
+
+
+
 ## Get the sample code from the Git repository.
 git clone https://github.com/googlecodelabs/orchestrate-with-kubernetes.git
 
