@@ -21,7 +21,7 @@ kubectl explain deployment.metadata.name
 ```
 
 ## Create a Deployment
-**Look at wordcount.yaml file**
+**Look at deployments/wordcount.yaml file**
 ```
 apiVersion: extensions/v1beta1
 kind: Deployment
