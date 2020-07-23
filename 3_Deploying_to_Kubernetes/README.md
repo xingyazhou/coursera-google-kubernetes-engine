@@ -49,7 +49,7 @@ spec:
               memory: "1G"
 ```
 
-kubectl create will create the wordcount deployment with three replicas, using version v1 of the wordcount container. The number of pods could be simply scaled by chaning the replicas field.
+kubectl create will create the wordcount deployment with **three** replicas, using version **v1** of the wordcount container. The number of pods could be simply scaled by chaning the replicas field.
 
 **Create the deployment object using kubectl create.**
 ```
@@ -105,6 +105,7 @@ kubectl get pods | grep wordcount- | wc -l
 5
 ```
 
-To learn more about deployment, look at [**this reference**] https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+To learn more about deployment, look at [**this reference**](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 
-
+## Author
+Xingya Zhou
