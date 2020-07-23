@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wordcount
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: wordcount
+        track: stable
+        version: v1
+    spec:
+      containers:
+        - name: wordcount
+          image: "gcr.io/my-first-gcp-project-271812/wordcount:v1"
+          resources:
+            limits:
+              cpu: 0.2
+              memory: "1G"
+
