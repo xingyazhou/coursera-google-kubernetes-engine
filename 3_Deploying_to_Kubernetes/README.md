@@ -50,19 +50,30 @@ kubectl create will create the wordcount deployment with three replicas, using v
 **Create the deployment object using kubectl create.**
 ```
 kubectl create -f deployments/wordcount.yaml
-kubectl get pods
 
-wordcount-6bf578cf6d-5s6br    1/1     Running   0          5s
-wordcount-6bf578cf6d-brnnt    1/1     Running   0          5s
-wordcount-6bf578cf6d-mflzl    1/1     Running   0          5s
-```
-```
+kubectl get deployments
+NAME          READY   UP-TO-DATE   AVAILABLE   AGE
+wordcount     3/3     3            3           6s
+
 kubectl get replicasets
-
 NAME                    DESIRED   CURRENT   READY   AGE
-wordcount-6bf578cf6d    3         3         0       2m22s
-```
+wordcount-57749b848c    3         3         0       82s
 
+kubectl get pods
+NAME                          READY   STATUS    RESTARTS   AGE
+wordcount-57749b848c-b8w46    1/1     Running   1          13s
+wordcount-57749b848c-ckthp    1/1     Running   1          13s
+wordcount-57749b848c-z99hc    1/1     Running   1          13s
+```
+```
+kubectl logs -f --tail 50 wordcount-57749b848c-b8w46 
+```
+('cat', 2)
+('dog', 2)
+('snake', 1)
+('elephant', 2)
+('sheep', 1)
+('mouse', 1)
 
 
 
