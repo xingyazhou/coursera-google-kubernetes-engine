@@ -67,13 +67,15 @@ wordcount-57749b848c-z99hc    1/1     Running   1          13s
 ```
 ```
 kubectl logs -f --tail 50 wordcount-57749b848c-b8w46 
-```
+
 ('cat', 2)
 ('dog', 2)
 ('snake', 1)
 ('elephant', 2)
 ('sheep', 1)
 ('mouse', 1)
+```
+
 
 
 
