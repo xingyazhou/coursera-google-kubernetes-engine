@@ -3,6 +3,12 @@
 ## Introduction
 This lab is simply modified to use a wordcount image for deployment. The wordcount image is stored in Google Container Registry.
 
+## Project Files
+The project workspace includes 2 files
+
+1. deployments/wordcount.yaml  The deployment configuration file.
+2. README.md Provides project info
+
 ## Start a Kubernetes Cluster
 ```
 $ gcloud config set compute/zone us-central1-a
@@ -87,7 +93,18 @@ kubectl logs -f --tail 50 wordcount-57749b848c-b8w46
 ('sheep', 1)
 ('mouse', 1)
 ```
+**Scale the number of pods**
+```
+kubectl scale deployment wordcount --replicas=5
+```
 
+**Verify there are 5 pods running.**
+```
+kubectl get pods | grep wordcount- | wc -l
 
+5
+```
+
+To learn more about deployment, look at [**this reference**] https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 
 
