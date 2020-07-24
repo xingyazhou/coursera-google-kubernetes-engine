@@ -105,7 +105,7 @@ kubectl get pods | grep wordcount- | wc -l
 5
 ```
 
-To learn more about deployment, look at [**this reference**](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+To learn more about deployment, look at [**Deployments**](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 
 ## Author
 Xingya Zhou
